@@ -1,0 +1,20 @@
+.showdates {
+	list-style: none;
+	.show {
+		width: 100%;
+
+		.show_info {
+			width: 100%;
+			position: relative;
+			margin-bottom: 30px;
+
+			h2 {
+				margin-bottom: 0;
+			}
+
+			p:first-of-type {
+				padding: 5px 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,46 @@
+.album {
+	display: flex;
+	justify-content: space-between;
+
+	img {
+		width: 45%;
+	}
+
+	.album_info {
+		width: 50%;
+
+		ul {
+			// list-style: none;
+			margin-bottom: 25px;
+		}
+	}
+}
+
+.reviewsHeading {
+	padding-top: 30px;
+	margin-bottom: 0;
+}
+
+.reviews {
+	// list-style: none;
+	padding: 15px 0;
+
+	li {
+		padding-bottom: 30px;
+
+		p {
+			padding-bottom: 20px;
+		}
+
+		a {
+			border: 1px solid #dcd7c9;
+			padding: 8px 15px;
+			transition: all 0.15s;
+
+			&:hover {
+				background: #dcd7c9;
+				color: #2c3639;
+			}
+		}
+	}
+}
