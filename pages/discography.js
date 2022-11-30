@@ -1,8 +1,11 @@
 const discography = require('../data/discography.json');
 import styles from '../styles/Discography.module.scss';
 import Head from 'next/head';
+import { useState } from 'react';
 
 export default function Discography() {
+	const [showReviews, setShowReviews] = useState(false);
+
 	return (
 		<>
 			<Head>
@@ -27,8 +30,9 @@ export default function Discography() {
 							</div>
 						</div>
 						{album.reviews.length > 0 ? (
-							<h2 className={styles.reviewsHeading}>Reviews</h2>
+							<h2 className={styles.reviewsHeading} onClick={() => setShowReviews(!showReviews)}>Reviews {showReviews !== false ? <span>&#x2212;</span> : <span>&#x2b;</span>}</h2>
 						) : null}
+						{showReviews !== false ?  
 						<ul className={styles.reviews}>
 							{album.reviews.map((review) => (
 								<li>
@@ -39,7 +43,7 @@ export default function Discography() {
 									</a>
 								</li>
 							))}
-						</ul>
+						</ul> : null}
 					</>
 				))}
 			</ul>

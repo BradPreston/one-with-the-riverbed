@@ -33,6 +33,7 @@ a {
 h1 {
 	font-size: 40px;
 	margin-bottom: 30px;
+	text-align: center;
 }
 
 h2 {
@@ -61,14 +62,17 @@ ul {
 		color-scheme: dark;
 	}
 	body {
-		color: #dcd7c9;
-		background: rgba(44, 54, 57, 0.75);
+		//color: #dcd7c9;
+		color: #2C3639;
+		//background: rgba(44, 54, 57, 0.75);
+		background-color: #DCD7C9;
 		background-image: url('https://f4.bcbits.com/img/0014647351_10.jpg');
 		background-attachment: fixed;
 	}
 
 	main {
-		background-color: rgba(44, 54, 57, 0.95);
+		//background-color: rgba(44, 54, 57, 0.95);
+		background-color: #DCD7C9;
 		top: 0;
 		height: 100vh;
 		background-position: cover;

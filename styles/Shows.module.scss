@@ -1,5 +1,7 @@
 .showdates {
 	list-style: none;
+	text-align: center;
+	
 	.show {
 		width: 100%;
 
@@ -17,4 +19,8 @@
 			}
 		}
 	}
+}
+
+.noShows {
+	text-align: center;
 }

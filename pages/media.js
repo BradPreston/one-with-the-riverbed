@@ -11,21 +11,8 @@ export default function Media() {
 				<title>Media | One with the Riverbed</title>
 			</Head>
 			<h1>Media</h1>
-			<h2>Pomotional Pictures</h2>
-			<h2>Live Pictures</h2>
-			<div className={styles.gallery}>
-				{gallery.live.map((photo) => (
-					<div key={photo.id} className={styles.galleryImgWrapper}>
-						<img
-							id={photo.id}
-							className={styles.galleryImage}
-							src={photo.link}
-							onClick={() => setActiveImage({ id: photo.id, link: photo.link })}
-						></img>
-					</div>
-				))}
-			</div>
-			<h2>Videos</h2>
+			<h2 className={styles.galleryHeading}>Pomotional Pictures</h2>
+			<h2 className={styles.galleryHeading}>Videos</h2>
 			<div className={styles.gallery}>
 				{gallery.videos.map((video) => (
 					<iframe
@@ -40,6 +27,19 @@ export default function Media() {
 				))}
 			</div>
 
+			<h2 className={styles.galleryHeading}>Live Pictures</h2>
+			<div className={styles.gallery}>
+				{gallery.live.map((photo) => (
+					<div key={photo.id} className={styles.galleryImgWrapper}>
+						<img
+							id={photo.id}
+							className={styles.galleryImage}
+							src={photo.link}
+							onClick={() => setActiveImage({ id: photo.id, link: photo.link })}
+						></img>
+					</div>
+				))}
+			</div>
 			{activeImage ? (
 				<div className={styles.imageModal}>
 					<button

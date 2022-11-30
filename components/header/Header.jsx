@@ -23,10 +23,10 @@ export default function Header() {
 					<Link href="/">Home</Link>
 					<Link href="/shows">Shows</Link>
 					<Link href="/discography">Discography</Link>
+					<Link href="/media">Media</Link>
 					<Link href="https://onewiththeriverbed.bandcamp.com/merch">
 						Merch
 					</Link>
-					<Link href="/media">Media</Link>
 				</nav>
 			</header>
 		</>

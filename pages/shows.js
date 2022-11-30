@@ -44,23 +44,24 @@ export default function Shows({ shows }) {
 				<title>Shows | One with the Riverbed</title>
 			</Head>
 			<h1>Show Dates</h1>
+			{showDates.length !== 0 ? 
 			<ul className={styles.showdates}>
 				{showDates.map((show) => (
 					<li key={show.id} className={styles.show}>
 						<div className={styles.show_info}>
 							<h2>
-								{show.artist} at {show.venue}
+								{show.venue}
 							</h2>
 							<p>{show.date}</p>
 							<p>
 								{show.address
-									? `${show.venue}, ${show.address}, ${show.location}`
-									: `${show.venue}, ${show.location}`}
+									? `${show.address}, ${show.location}`
+									: `${show.location}`}
 							</p>
 						</div>
 					</li>
 				))}
-			</ul>
+			</ul> : <p className={styles.noShows}>No scheduled shows</p>}
 		</>
 	);
 }
