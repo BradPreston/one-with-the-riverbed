@@ -42,13 +42,15 @@ export default function Media() {
 			</div>
 			{activeImage ? (
 				<div className={styles.imageModal}>
-					<button
-						className={styles.closeModal}
-						onClick={() => setActiveImage(null)}
-					>
-						X Close
-					</button>
-					<img src={activeImage.link}></img>
+					<div className={styles.imageModalInner}>
+						<button
+							className={styles.closeModal}
+							onClick={() => setActiveImage(null)}
+						>
+							X Close
+						</button>
+						<img src={activeImage.link}></img>
+					</div>
 				</div>
 			) : null}
 		</>
