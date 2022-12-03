@@ -26,11 +26,12 @@ export default function Shows({ shows }) {
 
 		let info = {
 			artist: show.artist ? show.artist.name : show.lineup[0],
-			venue: `${
+			/*venue: `${
 				show.venue.name.startsWith('The')
 					? show.venue.name
 					: 'The ' + show.venue.name
-			}`,
+			}`,*/
+			venue: show.venue.name,
 			date: `${day}, ${month} ${dt.date()} @ ${starttime}PM`,
 			location: show.venue.location,
 			address: show.venue.street_address,

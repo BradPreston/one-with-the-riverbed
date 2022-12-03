@@ -1,5 +1,14 @@
 import { Footer, Header } from '../../components';
 import Head from 'next/head';
+import BG from '../../public/images/bg.JPG';
+const styling = {
+	backgroundImage: `url(${BG})`,
+	backgroundPosition: 'center',
+	backgroundRepeat: 'no-repeat',
+	backgroundSize: 'cover',
+	width: '100vw',
+	height: '100vh'
+}
 
 export default function Layout({ children }) {
 	return (
@@ -12,7 +21,7 @@ export default function Layout({ children }) {
 					/>
 				</Head>
 				<Header />
-				<main className="main">{children}</main>
+				<main className="main" style={styling}>{children}</main>
 				{/* <Footer /> */}
 			</div>
 		</div>
