@@ -25,6 +25,19 @@
 		height: 200px;
 		background: black;
 	}
+
+	@media only screen and (max-width: 900px) {
+		width: 100%;
+		grid-template-columns: repeat(2, 1fr);
+
+		iframe {
+			height: 100px;
+
+			.ytp-large-play-button {
+				display: none !important;
+			}
+		}
+	}
 }
 
 .imageModal {
@@ -70,5 +83,11 @@
 	img {
 		width: 60%;
 		height: auto;
+	}
+
+	@media only screen and (max-width: 900px) {
+		img {
+			width: 100%;
+		}
 	}
 }

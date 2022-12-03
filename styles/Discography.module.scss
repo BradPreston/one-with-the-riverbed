@@ -30,6 +30,15 @@
 		border-top: 1px solid #dcd7c9;
 		padding-top: 30px;
 	}
+
+	@media only screen and (max-width: 900px) {
+		width: 100%;
+
+		img {
+			height: 150px;
+			width: auto;
+		}
+	} 
 }
 
 .reviewsHeading {
@@ -43,6 +52,16 @@
 
 	span {
 		font-size: 30px;
+	}
+
+	@media only screen and (max-width: 900px) {
+		width: 100%;
+		margin-left: 0;
+		font-size: 20px;
+
+		span {
+			font-size: 20px;
+		}
 	}
 }
 
@@ -69,5 +88,9 @@
 				color: #2c3639;
 			}
 		}
+	}
+
+	@media only screen and (max-width: 900px) {
+		width: 100%;
 	}
 }
