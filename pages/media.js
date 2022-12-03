@@ -47,7 +47,7 @@ export default function Media() {
 							className={styles.closeModal}
 							onClick={() => setActiveImage(null)}
 						>
-							X Close
+							&#x2715;
 						</div>
 						<img src={activeImage.link}></img>
 					</div>
