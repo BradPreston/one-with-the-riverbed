@@ -85,7 +85,7 @@ ul {
 		padding: 50px 15% 150px 15%;
 		margin: 0 auto;
 		position: fixed;
-		overflow-y: scroll;
+		overflow-y: auto;
 	}
 
 	@media only screen and (max-width: 900px) {

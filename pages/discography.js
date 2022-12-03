@@ -1,10 +1,20 @@
 const discography = require('../data/discography.json');
 import styles from '../styles/Discography.module.scss';
 import Head from 'next/head';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Discography() {
 	const [showReviews, setShowReviews] = useState(false);
+	const [isMobile, setIsMobile] = useState();
+	useEffect(() => {
+		if (window.screen.width <= 900) setIsMobile(true);
+		else setIsMobile(false);
+
+		window.addEventListener('resize', function() {
+			if (window.screen.width <= 900) setIsMobile(true);
+			else setIsMobile(false);
+		});
+	});
 
 	return (
 		<>
@@ -26,14 +36,27 @@ export default function Discography() {
 										</li>
 									))}
 								</ul>
-								<p>Released: {album.release_date}</p>
+								{isMobile === false ? <><p>Released: {album.release_date}</p>
+								{album.features ? <p>{album.features}</p> : null}
+								{album.artwork_artist ? <p>Album art by {album.artwork_artist}</p> : null}
+								{album.studio ? <p>{album.studio}</p> : null}
+								{album.logo_artist ? <p>Logo by {album.logo_artist}</p> : null} </> : null}
 							</div>
 						</div>
+								{isMobile === true ? <div className={styles.mobilementions}><p>Released: {album.release_date}</p>
+								{album.features ? <p>{album.features}</p> : null}
+								{album.artwork_artist ? <p>Album art by {album.artwork_artist}</p> : null}
+								{album.studio ? <p>{album.studio}</p> : null}
+								{album.logo_artist ? <p>Logo by {album.logo_artist}</p> : null} </div> : null}
 						{album.reviews.length > 0 ? (
-							<h2 className={styles.reviewsHeading} onClick={() => setShowReviews(!showReviews)}>Reviews {showReviews !== false ? <span>&#x2212;</span> : <span>&#x2b;</span>}</h2>
+							<h2 className={styles.reviewsHeading} onClick={(e) => {
+								let list = e.target.nextElementSibling;
+
+								list.style.display == "none" ? list.style.display = "block" : list.style.display = "none";
+							}}>Reviews {showReviews !== false ? <span>&#x2212;</span> : <span>&#x2b;</span>}</h2>
 						) : null}
-						{showReviews !== false ?  
-						<ul className={styles.reviews}>
+						
+						<ul style={{ display: "none" }} className={styles.reviews}>
 							{album.reviews.map((review) => (
 								<li key={review.author}>
 									<h3>{review.author}</h3>
@@ -43,7 +66,7 @@ export default function Discography() {
 									</a>
 								</li>
 							))}
-						</ul> : null}
+						</ul> 
 					</>
 				))}
 			</ul>

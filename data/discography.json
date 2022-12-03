@@ -9,6 +9,10 @@
 			"Phantom's Glance"
 		],
 		"release_date": "August 2021",
+		"studio": "Recorded, mixed, and mastered at Raygun Recording Studio from July to November 2020",
+		"features": "Violin by Katie Calvert",
+		"artwork_artist": "La Dama Luna",
+		"logo_artist": "John Brogger III",
 		"artwork": "https://f4.bcbits.com/img/a3965507546_16.jpg",
 		"reviews": [
 			{
@@ -27,7 +31,17 @@
 		"title": "Solace",
 		"tracklist": ["Wither", "Apparition", "Parasitic", "Blossom", "Solace"],
 		"release_date": "October 2018",
+		"studio": "Recorded at Raygun Recording Studio",
+		"features": "",
+		"artwork_artist": "Katie Calvert",
+		"logo_artist": "",
 		"artwork": "https://f4.bcbits.com/img/a2584957484_16.jpg",
-		"reviews": []
+		"reviews": [
+			{
+				"author": "Labandzi",
+				"link": "https://labandzi.blogspot.com/2018/11/one-with-riverbed-solace-2018-en.html",
+				"excerpt": "Atmospheric name, atmospheric logo, atmospheric views of Michigan nature on the cover art, this is the American One With The Riverbed combining in their music atmosphere with the straightforwardness and aggression of experimental metal"
+			}
+		]
 	}
 ]
