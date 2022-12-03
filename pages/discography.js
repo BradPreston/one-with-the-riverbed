@@ -35,7 +35,7 @@ export default function Discography() {
 						{showReviews !== false ?  
 						<ul className={styles.reviews}>
 							{album.reviews.map((review) => (
-								<li>
+								<li key={review.author}>
 									<h3>{review.author}</h3>
 									<p>{review.excerpt}...</p>
 									<a href={review.link} target="_blank" title={review.link}>
