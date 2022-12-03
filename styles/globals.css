@@ -70,7 +70,7 @@ ul {
 	}
 
 	main {
-		background-image: linear-gradient(rgba(44, 54, 57, .75), rgba(44, 54, 57, .75)), url('../public/static/images/bg.JPG');
+		background-image: linear-gradient(rgba(44, 54, 57, .75), rgba(44, 54, 57, .75)), url('/bg.JPG');
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
