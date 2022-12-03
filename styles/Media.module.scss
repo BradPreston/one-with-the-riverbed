@@ -89,5 +89,11 @@
 		img {
 			width: 100%;
 		}
+
+		.closeModal {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+		}
 	}
 }
