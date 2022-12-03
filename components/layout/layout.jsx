@@ -1,8 +1,8 @@
 import { Footer, Header } from '../../components';
 import Head from 'next/head';
-import BG from '../../public/images/bg.JPG';
+import BG from '../../public/bg.JPG';
 const styling = {
-	backgroundImage: `url(${BG})`,
+	backgroundImage: `linear-gradient(rgba(44, 54, 57, .85), rgba(44, 54, 57, .85)), url(${BG})`,
 	backgroundPosition: 'center',
 	backgroundRepeat: 'no-repeat',
 	backgroundSize: 'cover',
