@@ -2,6 +2,11 @@
 const nextConfig = {
 	reactStrictMode: true,
 	swcMinify: true,
+	webpack5: true,
+	webpack: (config) => {
+		config.externals = [...config.externals, "bcrypt"]
+		return config
+	},
 	images: {
 		remotePatterns: [
 			{
